@@ -8,7 +8,9 @@ along with the calculated percentages of the largest calculated max.
 For example: say you benched press 255 lb for 10 reps. The app would take those numbers and use the 3 most popular  
 max calculation equations and calculate your estimated max bench press.
 
-
+## Requirments
+Python: 3.9+  
+Kivy: 2.2.1+
 
 ## Install and Run
 Comming soon
