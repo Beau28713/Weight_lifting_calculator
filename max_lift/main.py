@@ -5,6 +5,8 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.label import Label
 from kivy.core.window import Window
 
+import pandas
+
 
 class Train_App(FloatLayout):
     def __init__(self, **kwargs):
@@ -32,7 +34,7 @@ class Train_App(FloatLayout):
             pos_hint={"x": 0.25, "top": 0.20},
         )
         self.percentage_output = TextInput(
-            multiline=False, size_hint=(0.25, 0.8), pos_hint={"x": 0.25, "top": 0.99}
+            multiline=False, size_hint=(0.33, 0.80), pos_hint={"x": 0.25, "top": 0.99}
         )
         self.max_label = Label(
             text="Calculated Max's",
@@ -42,7 +44,7 @@ class Train_App(FloatLayout):
         self.max_output = TextInput(
             readonly=True,
             size_hint=(0.4, 0.7),
-            pos_hint={"x": 0.55, "top": 0.99},
+            pos_hint={"x": 0.60, "top": 0.99},
         )
         self.enter_buton = Button(
             size_hint=(0.1, 0.1),
@@ -71,18 +73,14 @@ class Train_App(FloatLayout):
 
         largest_max = max(brycki, epley, oConner)
 
-        percentage_list = [(x / 10) * largest_max for x in range(10)]
-        percentages = f"""
-Percntages for largest max:
-            30 percent: {percentage_list[3]:.2f}
-            40 percent: {percentage_list[4]:.2f}
-            50 percent: {percentage_list[5]:.2f}
-            60 percent: {percentage_list[6]:.2f}
-            70 percent: {percentage_list[7]:.2f}
-            80 percent: {percentage_list[8]:.2f}
-            90 percent: {percentage_list[9]:.2f}"""
+        percentage_list = [(x / 10 * brycki, y / 10 * oConner) for x, y in enumerate(range(10))]
+        
+        data = percentage_list
+        headers = ['brycki', 'oConner']
+        percentages = pandas.DataFrame(data, columns=headers)
+        print(percentages)
 
-        self.percentage_output.text = percentages
+        self.percentage_output.text = percentages.to_string()
 
         self.max = f"""
 Your max using the following equations are:
