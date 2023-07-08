@@ -16,4 +16,5 @@ Kivy: 2.2.1+
 Comming soon
 
 
-![max_lift](https://github.com/Beau28713/Weight_lifting_calculator/assets/65408911/31985d8b-cf1e-4b3a-9772-3da41651577c)
+![Max_calc_pandas](https://github.com/Beau28713/Weight_lifting_calculator/assets/65408911/bbdc684b-662d-4091-ad52-a600729ed67f)
+
