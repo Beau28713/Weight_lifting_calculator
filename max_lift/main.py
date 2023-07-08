@@ -73,20 +73,22 @@ class Train_App(FloatLayout):
 
         largest_max = max(brycki, epley, oConner)
 
-        percentage_list = [(x / 10 * brycki, y / 10 * oConner) for x, y in enumerate(range(10))]
-        
+        percentage_list = [
+            (x / 10 * brycki, y / 10 * oConner) for x, y in enumerate(range(10))
+        ]
+
         data = percentage_list
-        headers = ['brycki', 'oConner']
+        headers = ["brycki", "oConner"]
         percentages = pandas.DataFrame(data, columns=headers)
-        print(percentages)
 
         self.percentage_output.text = percentages.to_string()
 
         self.max = f"""
 Your max using the following equations are:
-            Brycki  = {brycki:.2f}
-            Epley   = {epley:.2f}
-            oConner = {oConner:.2f}
+
+Brycki  = {brycki:.2f}
+Epley   = {epley:.2f}
+oConner = {oConner:.2f}
             """
         self.max_output.text = self.max
 
