@@ -11,6 +11,7 @@ max calculation equations and calculate your estimated max bench press.
 ## Requirements
 Python: 3.9+  
 Kivy: 2.2.1+
+Pandas: 2.0.3+
 
 ## Install and Run
 Comming soon
