@@ -11,9 +11,9 @@ Percentage Calculation: Additionally, the app calculates the percentages of the 
 For instance, if you performed a bench press with 255 lbs for 10 reps, the app would utilize three popular maximum calculation equations to estimate your maximum bench press weight.
 
 ## How It Works
-Input: Enter the weight lifted in pounds and the number of repetitions performed.
-Calculation: The app applies three popular maximum calculation equations to estimate your maximum lift.
-Output: Receive the estimated maximum weight along with the calculated percentages based on the largest calculated maximum.
+Input: Enter the weight lifted in pounds and the number of repetitions performed.  
+Calculation: The app applies three popular maximum calculation equations to estimate your maximum lift.  
+Output: Receive the estimated maximum weight along with the calculated percentages based on the largest calculated maximum.  
 
 
 ## Support
